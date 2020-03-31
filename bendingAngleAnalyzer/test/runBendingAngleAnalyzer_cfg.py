@@ -22,6 +22,10 @@ process.source = cms.Source("PoolSource",
     secondaryFileNames = cms.untracked.vstring()
 )
 
+process.TFileService = cms.Service("TFileService",
+    fileName = cms.string("bendingAngleAnalyzerOut.root")
+)
+
 process.p = cms.Path(process.bendingAngleAnalyzer)
 
 
